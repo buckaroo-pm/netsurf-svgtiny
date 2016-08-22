@@ -133,7 +133,8 @@ static void ignore_msg(uint32_t severity, void *ctx, const char *msg, ...)
 
 svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
 		const char *buffer, size_t size, const char *url,
-		int viewport_width, int viewport_height)
+		int viewport_width, int viewport_height,
+		int (*fetch_cb)(void *parser, const char *base, const char *uri))
 {
 	dom_document *document;
 	dom_exception exc;
@@ -158,7 +159,7 @@ svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
 	state.gradient_y2 = NULL;
 
 	parser = dom_xml_parser_create(NULL, NULL,
-				       ignore_msg, NULL, &document);
+				       ignore_msg, NULL, &document, fetch_cb);
 
 	if (parser == NULL)
 		return svgtiny_LIBDOM_ERROR;
