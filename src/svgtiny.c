@@ -134,7 +134,7 @@ static void ignore_msg(uint32_t severity, void *ctx, const char *msg, ...)
 svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
 		const char *buffer, size_t size, const char *url,
 		int viewport_width, int viewport_height,
-		int (*fetch_cb)(void *parser, const char *base, const char *uri))
+		svgtiny_dom_xml_parser_fetch_cb fetch_cb)
 {
 	dom_document *document;
 	dom_exception exc;
@@ -181,7 +181,7 @@ svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
 	/* We're done parsing, drop the parser.
 	 * We now own the document entirely.
 	 */
-	dom_xml_parser_destroy(parser);
+//	dom_xml_parser_destroy(parser); /**\todo we need to ensure the doc is fully parsed here */
 
 	/* find root <svg> element */
 	exc = dom_document_get_document_element(document, &svg);
