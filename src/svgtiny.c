@@ -151,15 +151,13 @@ svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
 	assert(buffer);
 	assert(url);
 
-	UNUSED(url);
-
 	state.gradient_x1 = NULL;
 	state.gradient_y1 = NULL;
 	state.gradient_x2 = NULL;
 	state.gradient_y2 = NULL;
 
-	parser = dom_xml_parser_create(NULL, NULL,
-				       ignore_msg, NULL, &document, fetch_cb);
+	parser = dom_xml_parser_create(NULL, NULL, ignore_msg, NULL,
+				&document, url, fetch_cb);
 
 	if (parser == NULL)
 		return svgtiny_LIBDOM_ERROR;

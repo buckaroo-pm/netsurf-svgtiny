@@ -63,7 +63,7 @@ struct svgtiny_named_color {
 };
 
 typedef int (*svgtiny_dom_xml_parser_fetch_cb)(void *parser, const char *base, const char *uri,
-		int (*svgtiny_expat_xmlparser_parse_cb)(void *parser, const char *data, int size));
+		int (*svgtiny_expat_xmlparser_parse_cb)(void *parser, const char *data, int size, const char *uri));
 
 struct svgtiny_diagram *svgtiny_create(void);
 svgtiny_code svgtiny_parse(struct svgtiny_diagram *diagram,
