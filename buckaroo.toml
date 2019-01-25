@@ -1,0 +1,16 @@
+targets = [ "//:svgtiny" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/netsurf-dom"
+version = "branch=master"
+targets = [ "//:dom", "//bindings/xml:xml" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-cairo"
+version = "branch=master"
+private = true
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-x11"
+version = "branch=master"
+private = true

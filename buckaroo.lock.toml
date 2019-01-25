@@ -1,0 +1,53 @@
+manifest = "d3b4e1fdde2fa9ca17b69622d2ae0f87d3fc8777045082698f27f7768ec02eb9"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/netsurf-dom"
+target = "//:dom"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-cairo"
+target = "//:cairo"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pkg-config-x11"
+target = "//:x11"
+
+[lock."github.com/buckaroo-pm/madler-zlib"]
+versions = [ "branch=master" ]
+revision = "906f727175ca6a7f8943e375467d6e461a55b68d"
+
+[lock."github.com/buckaroo-pm/netsurf-dom"]
+versions = [ "branch=master" ]
+revision = "c4036fb0220413065f1e5c596b8fc586cd0499c5"
+
+[lock."github.com/buckaroo-pm/netsurf-hubbub"]
+versions = [ "branch=master" ]
+revision = "a927156c467f628d541a7692e431a70b55a24cde"
+
+[lock."github.com/buckaroo-pm/netsurf-parserutils"]
+versions = [ "branch=master" ]
+revision = "bdee37e518fa178e8eaaa80fc6a8ac2eeb23f0be"
+
+[lock."github.com/buckaroo-pm/netsurf-wapcaplet"]
+versions = [ "branch=master" ]
+revision = "6312c7378ab40e37594b04fcce7f8753998e737e"
+
+[lock."github.com/buckaroo-pm/netsurf-wapcaplet".lock."github.com/buckaroo-pm/check"]
+versions = [ "branch=master" ]
+revision = "53e84bd2ed5d98cf98cb91e781a2983d7d01425d"
+
+[lock."github.com/buckaroo-pm/pkg-config-cairo"]
+versions = [ "branch=master" ]
+revision = "a4774a6e445f193b7474dbcaf3c42e7e909f2735"
+
+[lock."github.com/buckaroo-pm/pkg-config-x11"]
+versions = [ "branch=master" ]
+revision = "6f292a6166cd3c45c776b294485a24e7d71c0e0c"
+
+[lock."github.com/buckaroo-pm/xml2"]
+versions = [ "branch=master" ]
+revision = "d50aefc251efb38ed3c7ed5e7ee643583e0d4b9e"
+
+[lock."github.com/buckaroo-pm/xz"]
+versions = [ "branch=master" ]
+revision = "593cc1510a5b0f62d0d2167bdd57d36182a0cf35"

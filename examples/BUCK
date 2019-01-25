@@ -1,0 +1,18 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps_from_package')
+load('//:subdir_glob.bzl', 'subdir_glob')
+
+cairo = \
+  buckaroo_deps_from_package('github.com/buckaroo-pm/pkg-config-cairo')
+
+x11 = \
+  buckaroo_deps_from_package('github.com/buckaroo-pm/pkg-config-x11')
+
+cxx_binary(
+  name = 'display-x11',
+  srcs = [
+    'svgtiny_display_x11.c',
+  ],
+  deps = cairo + x11 + [
+    '//:svgtiny',
+  ],
+)

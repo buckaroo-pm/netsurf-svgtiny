@@ -21,6 +21,7 @@
 
 #include <libgen.h>
 #include <math.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
@@ -114,8 +115,11 @@ int main(int argc, char *argv[])
 		case svgtiny_OUT_OF_MEMORY:
 			fprintf(stderr, "svgtiny_OUT_OF_MEMORY");
 			break;
-		case svgtiny_LIBXML_ERROR:
-			fprintf(stderr, "svgtiny_LIBXML_ERROR");
+		// case svgtiny_LIBXML_ERROR:
+		// 	fprintf(stderr, "svgtiny_LIBXML_ERROR");
+		// 	break;
+		case svgtiny_LIBDOM_ERROR:
+			fprintf(stderr, "svgtiny_LIBDOM_ERROR");
 			break;
 		case svgtiny_NOT_SVG:
 			fprintf(stderr, "svgtiny_NOT_SVG");
@@ -273,13 +277,13 @@ void event_diagram_key_press(XKeyEvent *key_event)
 	case XK_KP_Add:
 		new_scale += 0.1;
 		break;
-	
+
 	case XK_1:
 	case XK_KP_Multiply:
 	case XK_KP_1:
 		new_scale = 1;
 		break;
-	
+
 	case XK_2:
 	case XK_KP_2:
 		new_scale = 2;
