@@ -1,4 +1,4 @@
-manifest = "d3b4e1fdde2fa9ca17b69622d2ae0f87d3fc8777045082698f27f7768ec02eb9"
+manifest = "a8eb00860c9b57fcbc79bfbc39d4ba85c56aecc9553520971b73194f5d62a602"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/netsurf-dom"
