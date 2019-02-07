@@ -1,4 +1,4 @@
-manifest = "d3b4e1fdde2fa9ca17b69622d2ae0f87d3fc8777045082698f27f7768ec02eb9"
+manifest = "a8eb00860c9b57fcbc79bfbc39d4ba85c56aecc9553520971b73194f5d62a602"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/netsurf-dom"
@@ -14,7 +14,7 @@ target = "//:x11"
 
 [lock."github.com/buckaroo-pm/madler-zlib"]
 versions = [ "branch=master" ]
-revision = "906f727175ca6a7f8943e375467d6e461a55b68d"
+revision = "81e58039a82d50f9c7768c651dce21834557aec1"
 
 [lock."github.com/buckaroo-pm/netsurf-dom"]
 versions = [ "branch=master" ]
